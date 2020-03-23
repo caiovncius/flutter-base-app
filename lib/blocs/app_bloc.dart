@@ -26,5 +26,5 @@ class AppBloc extends ChangeNotifier {
   }
 
   /// Example bloc function
-  String getConcatenate(String concat) => "${_example} = ${concat}";
+  String getConcatString(String concat) => "${_example} = ${concat}";
 }
