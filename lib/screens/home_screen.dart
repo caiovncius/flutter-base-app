@@ -7,6 +7,18 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   @override
+  void initState() {
+    super.initState();
+    HttpService.instance(context: context).setBaseUrl('http://apibase.example');
+    Future.microtask(() => _loadInitData());
+  }
+
+  Future<void> _loadInitData() async {
+    /// Get request example
+    /// var test = await ExampleRepository.getExampleModel(2);
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
